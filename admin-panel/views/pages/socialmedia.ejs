@@ -1,0 +1,127 @@
+<%- include(rootPath + "/views/layout/header.ejs") %>
+
+<div class="row">
+    <%- include(rootPath + "/views/layout/sidebar.ejs") %>
+    <div class="offset-2 col-10 py-3">
+        <h1>Social Medias</h1>
+        <table class="table table-bordered mt-5">
+            <thead class="table-primary">
+                <tr>
+                    <th>Name:</th>
+                    <th>Icon:</th>
+                    <th>Link:</th>
+                    <th colspan="2">Operations:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i = 0; i < datas.length; i++) { %>
+                    <tr>
+                        <td><%= datas[i].name %></td>
+                        <td><%= datas[i].icon %></td>
+                        <td><a href="<%= datas[i].link %>"><%= datas[i].link %></a></td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#updateSocialMediaModal<%= datas[i].id %>"></i>
+                            <div class="modal fade" id="updateSocialMediaModal<%= datas[i].id %>" tabindex="-1" aria-labelledby="updateSocialMediaModal<%= datas[i].id %>Label" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="updateSocialMediaModal<%= datas[i].id %>Label">Update Social Media</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/socialmedia/update/<%= datas[i].id %>" method="post" class="container">
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="name">Name:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="name" id="name" value="<%= datas[i].name %>" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="icon">Icon:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="icon" id="icon" value="<%= datas[i].icon %>" class="form-control" required>
+                                                        <div class="form-text">(as fontawesome tag)</div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="link">Link:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="link" id="link" value="<%= datas[i].link %>" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <div class="offset-9 col-3">
+                                                        <input type="submit" value="Update" class="btn btn-primary w-100">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href=/socialmedia/delete/<%= datas[i].id %>>
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#addSocialMediaModal">Add a Social Media</button>
+        <div class="modal fade" id="addSocialMediaModal" tabindex="-1" aria-labelledby="addSocialMediaModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="addSocialMediaModalLabel">New Social Media</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/socialmedia/add" method="post" class="container">
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="name">Name:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="icon">Icon:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="icon" id="icon" class="form-control" required>
+                                    <div class="form-text">(as fontawesome tag)</div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="link">Link:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="link" id="link" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="offset-9 col-3">
+                                    <input type="submit" value="Add" class="btn btn-primary w-100">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include(rootPath + "/views/layout/footer.ejs") %>

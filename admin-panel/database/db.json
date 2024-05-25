@@ -1,0 +1,184 @@
+{
+  "about": [
+    {
+      "id": "0",
+      "fullname": "Sheyda Sultan",
+      "headings": "Frontend Developer, Instructor, Tech Enthusiast",
+      "text": "I am passionate about my work. Because I love what I do, I have a steady source of motivation that drives me to do my best. In my unemployed process, this passion led me to challenge myself daily and learn new skills that helped me to do better work.",
+      "email": "sheydasultan.99@gmail.com, sheyda.sultanova@yahoo.com",
+      "phone": "+994708090214, +994516144578",
+      "linkedin": "https://www.linkedin.com/in/sheyda-sultanova/",
+      "address": "30 Elshan Mehdiyev, Baku, Azerbaijan",
+      "img": "/uploads/4a7ea030813b5dec0baa33100.png",
+      "cv": "/uploads/4a7ea030813b5dec0baa33101.pdf"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "name": "Responsive Design",
+      "desc": "Crafting visually appealing and user-friendly websites that seamlessly adapt to various devices and screen sizes. This service includes mobile-first design principles, ensuring an optimal browsing experience on smartphones, tablets, and desktops.",
+      "icon": "<i class=\"fa-solid fa-code\"></i>"
+    },
+    {
+      "id": "2",
+      "name": "SPA Development",
+      "desc": "Building dynamic and fast-loading single-page applications using modern JavaScript frameworks like React, Vue.js, or Angular. This service focuses on creating interactive and performant web apps with smooth navigation and real-time updates.",
+      "icon": "<i class=\"fa-solid fa-gear\"></i>"
+    },
+    {
+      "id": "3",
+      "name": "Performance Optimization",
+      "desc": "Enhancing website speed and performance through advanced techniques such as code minification, image optimization, lazy loading, and implementing best practices for web performance. This service ensures that websites load quickly, improving user experience and SEO rankings.",
+      "icon": "<i class=\"fa-solid fa-filter\"></i>"
+    }
+  ],
+  "skills": [
+    {
+      "id": "1",
+      "name": "HTML",
+      "progress": "100"
+    },
+    {
+      "id": "2",
+      "name": "CSS",
+      "progress": "95"
+    },
+    {
+      "id": "3",
+      "name": "JavaScript",
+      "progress": "85"
+    },
+    {
+      "id": "4",
+      "name": "Bootstrap",
+      "progress": "95"
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "1",
+      "name": "As Otomotiv",
+      "img": "/uploads/portfolio/86812e4ad179dfd9ea3f2cf00.png",
+      "category": "Website"
+    },
+    {
+      "id": "2",
+      "name": "Bookland",
+      "img": "/uploads/portfolio/64d1ccd884881635d1516b100.png",
+      "category": "Website"
+    },
+    {
+      "id": "3",
+      "name": "HelpAnimals",
+      "img": "/uploads/portfolio/03dabf29a3f08717b7947c100.png",
+      "category": "Website"
+    },
+    {
+      "id": "4",
+      "name": "Switch",
+      "img": "/uploads/portfolio/f0f2953ebf6d0b9f26d70f700.png",
+      "category": "Website"
+    },
+    {
+      "id": "5",
+      "name": "As Otomotiv",
+      "img": "/uploads/portfolio/13cd7b97c6f2674ed54282f00.png",
+      "category": "Website"
+    },
+    {
+      "id": "6",
+      "name": "HelpAnimals",
+      "img": "/uploads/portfolio/a608b4b1001ee7b134380e300.png",
+      "category": "Website"
+    },
+    {
+      "id": "7",
+      "name": "As Otomotiv",
+      "img": "/uploads/portfolio/bc870b3abb85a702350de2200.png",
+      "category": "Website"
+    },
+    {
+      "id": "8",
+      "name": "HelpAnimals",
+      "img": "/uploads/portfolio/4da99555987cdb06907b71300.png",
+      "category": "Website"
+    }
+  ],
+  "statistics": [
+    {
+      "id": "0",
+      "clients": "5",
+      "projects": "21",
+      "awards": "2",
+      "experience": "5"
+    }
+  ],
+  "clients": [
+    {
+      "id": "1",
+      "name": [
+        "John Doe"
+      ],
+      "occupation": [
+        "Chief Excutive Director"
+      ],
+      "message": [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat tempor odio, vitae porttitor ex dignissim et. Sed nisi nulla, eleifend eget lacinia vel, ullamcorper sit amet sem. Morbi eget justo ex. Nam lectus purus, maximus ac rutrum ut, scelerisque a libero. Pellentesque sit amet dignissim nisi, eu hendrerit mauris. Nunc vel nibh leo."
+      ],
+      "img": "/uploads/clients/28d2a1e2fd879d321ecc94f00.png"
+    },
+    {
+      "id": "2",
+      "name": [
+        "Karina Krawczyk"
+      ],
+      "occupation": [
+        "Project Manager"
+      ],
+      "message": [
+        "Etiam eget convallis velit. Nullam sit amet porta elit, quis varius lectus. Etiam at velit diam. Donec nec erat velit. Phasellus ut vestibulum sapien, ac scelerisque mi. Aenean nec mi congue, venenatis eros eu, malesuada risus. Donec vel odio magna. Vivamus ullamcorper, metus vel finibus semper, mi sapien accumsan nulla, a commodo arcu enim id nisi."
+      ],
+      "img": "/uploads/clients/fb0077aee14411f2c26878200.png"
+    }
+  ],
+  "socialmedia": [
+    {
+      "id": "1",
+      "name": "LinkedIn",
+      "icon": "<i class=\"fa-brands fa-linkedin\"></i>",
+      "link": "https://www.linkedin.com/in/sheyda-sultanova/"
+    },
+    {
+      "id": "2",
+      "name": "Facebook",
+      "icon": "<i class=\"fa-brands fa-facebook\"></i>",
+      "link": "https://www.facebook.com/sheydasultan/"
+    },
+    {
+      "id": "3",
+      "name": "Instagram",
+      "icon": "<i class=\"fa-brands fa-instagram\"></i>",
+      "link": "https://www.instagram.com/sheyda_ova/"
+    },
+    {
+      "id": "4",
+      "name": "GitHub",
+      "icon": "<i class=\"fa-brands fa-github\"></i>",
+      "link": "https://github.com/sheyda99"
+    },
+    {
+      "id": "5",
+      "name": "Medium",
+      "icon": "<i class=\"fa-brands fa-medium\"></i>",
+      "link": "https://medium.com/@sheydasultanova"
+    },
+    {
+      "id": "6",
+      "name": "Telegram",
+      "icon": "<i class=\"fa-brands fa-telegram\"></i>",
+      "link": "https://t.me/sheyda_ova"
+    }
+  ],
+  "contact": []
+}

@@ -1,0 +1,146 @@
+<%- include(rootPath + "/views/layout/header.ejs") %>
+
+<div class="row">
+    <%- include(rootPath + "/views/layout/sidebar.ejs") %>
+    <div class="offset-2 col-10 py-3">
+        <h1>Client testimonials</h1>
+        <table class="table table-bordered mt-5">
+            <thead class="table-primary">
+                <tr>
+                    <th>Name:</th>
+                    <th>Occupation:</th>
+                    <th>Message:</th>
+                    <th>Image:</th>
+                    <th colspan="2">Operations:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i = 0; i < datas.length; i++) { %>
+                    <tr>
+                        <td><%= datas[i].name %></td>
+                        <td><%= datas[i].occupation %></td>
+                        <td><%= datas[i].message %></td>
+                        <td class="w-25">
+                            <img src="<%= datas[i].img %>" alt="" class="img-fluid">
+                        </td>
+                        <td>
+                            <i class="fa-solid fa-pen-to-square" data-bs-toggle="modal" data-bs-target="#updateClientModal<%= datas[i].id %>"></i>
+                            <div class="modal fade" id="updateClientModal<%= datas[i].id %>" tabindex="-1" aria-labelledby="updateClientModal<%= datas[i].id %>Label" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="updateClientModal<%= datas[i].id %>Label">Update Client testimonial</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="/clients/update/<%= datas[i].id %>" method="post" enctype="multipart/form-data" class="container">
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="name">Name:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="name" id="name" value="<%= datas[i].name %>" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="occupation">Occupation:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="occupation" id="occupation" value="<%= datas[i].occupation %>" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="message">Message:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <textarea name="message" id="message" class="form-control" required><%= datas[i].message %></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="img">Image:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="file" name="img" id="img" class="form-control">
+                                                        <div class="form-text"><%= datas[i].img %></div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-4">
+                                                    <div class="offset-9 col-3">
+                                                        <input type="submit" value="Update" class="btn btn-primary w-100">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href=/clients/delete/<%= datas[i].id %>>
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+
+        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#addClientModal">Add a Client testimonial</button>
+        <div class="modal fade" id="addClientModal" tabindex="-1" aria-labelledby="addClientModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="addClientModalLabel">New Client testimonial</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/clients/add" method="post" enctype="multipart/form-data" class="container">
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="name">Name:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="name" id="name" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="occupation">Occupation:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" name="occupation" id="occupation" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="message">Message:</label>
+                                </div>
+                                <div class="col-8">
+                                    <textarea name="message" id="message" class="form-control" required></textarea>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-4">
+                                    <label for="img">Image:</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="file" name="img" id="img" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="offset-9 col-3">
+                                    <input type="submit" value="Add" class="btn btn-primary w-100">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include(rootPath + "/views/layout/footer.ejs") %>

@@ -1,0 +1,49 @@
+<%- include(rootPath + "/views/layout/header.ejs") %>
+
+<div class="row">
+    <%- include(rootPath + "/views/layout/sidebar.ejs") %>
+    <div class="offset-2 col-10 py-3">
+        <h1>Statistics</h1>
+        <form action="/statistics/update" method="post" class="container mt-5">
+            <div class="row mt-3">
+                <div class="col-4">
+                    <label for="clients">Clients:</label>
+                </div>
+                <div class="col-8">
+                    <input type="number" name="clients" id="clients" class="form-control" value="<%= datas[0].clients %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <label for="projects">Projects:</label>
+                </div>
+                <div class="col-8">
+                    <input type="number" name="projects" id="projects" class="form-control" value="<%= datas[0].projects %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <label for="awards">Awards:</label>
+                </div>
+                <div class="col-8">
+                    <input type="number" name="awards" id="awards" class="form-control" value="<%= datas[0].awards %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-4">
+                    <label for="experience">Experience (in years):</label>
+                </div>
+                <div class="col-8">
+                    <input type="number" name="experience" id="experience" class="form-control" value="<%= datas[0].experience %>" required>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="offset-9 col-3">
+                    <input type="submit" value="Save" class="btn btn-primary w-100">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include(rootPath + "/views/layout/footer.ejs") %>

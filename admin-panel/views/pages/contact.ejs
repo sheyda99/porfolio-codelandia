@@ -1,0 +1,83 @@
+<%- include(rootPath + "/views/layout/header.ejs") %>
+
+<div class="row">
+    <%- include(rootPath + "/views/layout/sidebar.ejs") %>
+    <div class="offset-2 col-10 py-3">
+        <h1>Form submissions</h1>
+        <table class="table table-bordered mt-5">
+            <thead class="table-primary">
+                <tr>
+                    <th>Name:</th>
+                    <th>Email:</th>
+                    <th>Subject:</th>
+                    <th colspan="2">Operations:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let i = 0; i < datas.length; i++) { %>
+                    <tr>
+                        <td><%= datas[i].name %></td>
+                        <td><%= datas[i].email %></td>
+                        <td><%= datas[i].subject %></td>
+                        <td>
+                            <i class="fa-solid fa-eye" data-bs-toggle="modal" data-bs-target="#showContactModal<%= datas[i].id %>"></i>
+                            <div class="modal fade" id="showContactModal<%= datas[i].id %>" tabindex="-1" aria-labelledby="showContactModal<%= datas[i].id %>Label" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="showContactModal<%= datas[i].id %>Label">Form submission details</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form class="container">
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="name">Name:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="name" id="name" value="<%= datas[i].name %>" class="form-control" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="email">Email:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="email" name="email" id="email" value="<%= datas[i].email %>" class="form-control" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="subject">Subject:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <input type="text" name="subject" id="subject" value="<%= datas[i].subject %>" class="form-control" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-4">
+                                                        <label for="message">Message:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        <textarea name="message" id="message" class="form-control" readonly><%= datas[i].message %></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a href=/contact/delete/<%= datas[i].id %>>
+                                <i class="fa-solid fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<%- include(rootPath + "/views/layout/footer.ejs") %>

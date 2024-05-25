@@ -1,0 +1,89 @@
+<%- include(rootPath + "/views/layout/header.ejs") %>
+
+<div class="row">
+    <%- include(rootPath + "/views/layout/sidebar.ejs") %>
+    <div class="offset-2 col-10 py-3">
+        <h1>About Info</h1>
+        <form action="/about/update" method="post" enctype="multipart/form-data" class="container mt-5">
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="fullname">Fullname:</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" name="fullname" id="fullname" class="form-control" value="<%= datas[0].fullname %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="headings">Headings:</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" name="headings" id="headings" class="form-control" value="<%= datas[0].headings %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="text">Text:</label>
+                </div>
+                <div class="col-9">
+                    <textarea name="text" id="text" class="form-control" rows="5" required><%= datas[0].text %></textarea>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" name="email" id="email" class="form-control" value="<%= datas[0].email %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="phone">Phone:</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" name="phone" id="phone" class="form-control" value="<%= datas[0].phone %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="linkedin">Linkedin:</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" name="linkedin" id="linkedin" class="form-control" value="<%= datas[0].linkedin %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" name="address" id="address" class="form-control" value="<%= datas[0].address %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="img">Image:</label>
+                </div>
+                <div class="col-9">
+                    <input type="file" name="img" id="img" class="form-control" accept="image/*" value="<%= datas[0].img %>" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-3">
+                    <label for="cv">CV file:</label>
+                </div>
+                <div class="col-9">
+                    <input type="file" name="cv" id="cv" class="form-control" accept=".pdf" value="<%= datas[0].cv %>" required>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="offset-9 col-3">
+                    <input type="submit" value="Save" class="btn btn-primary w-100">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include(rootPath + "/views/layout/footer.ejs") %>
