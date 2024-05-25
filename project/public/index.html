@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Sheyda Sultan">
+    <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<title>Portfolio</title>
+</head>
+<body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
+    <div class="ts-page-wrapper" id="page-top">
+        <!--************ NAVIGATION ************************************************************************************-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+            <div class="container">
+                <a class="navbar-brand ts-push-down__50 position-absolute ts-bottom__0 bg-white pb-0 ts-z-index__1 ts-scroll" href="#page-top">
+                    <img src="assets/img/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav d-block d-lg-flex ml-auto text-right">
+                        <a class="nav-item nav-link active ts-scroll" href="#page-top">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link ts-scroll" href="#my-services">Services</a>
+                        <a class="nav-item nav-link ts-scroll" href="#about-me">About Me</a>
+                        <a class="nav-item nav-link ts-scroll" href="#my-skills">Skills</a>
+                        <a class="nav-item nav-link ts-scroll" href="#portfolio">Portfolio</a>
+                        <a class="nav-item nav-link ts-scroll" href="#testimonials">Clients</a>
+                        <a class="nav-item nav-link ts-scroll mr-2" href="#form-contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!--************ HERO ************************************************************************************-->
+        <div id="ts-hero" class="ts-animate-hero-items">
+            <div class="container position-relative h-100 ts-align__vertical">
+                <div class="row w-100">
+                    <div class="col-md-8">
+                        <figure id="hero-socialmedia" class="ts-social-icons mb-4">
+                            <!-- <a href="#" class="mr-3">
+                                <i class="fab fa-facebook"></i>
+                            </a> -->
+                        </figure>
+                        <h1>I am <span id="fullname"></span></h1>
+                        <h1 class="ts-bubble-border">
+                            <span class="ts-title-rotate" id="headings">
+                                <span class="active"></span>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+                <a href="#my-services" class="ts-btn-effect position-absolute ts-bottom__0 ts-left__0 ts-scroll ml-3 mb-3">
+                    <span class="ts-visible ts-circle__sm rounded-0 ts-bg-primary">
+                        <i class="fa fa-arrow-down text-white"></i>
+                    </span>
+                    <span class="ts-hidden ts-circle__sm rounded-0">
+                        <i class="fa fa-arrow-down text-white"></i>
+                    </span>
+                </a>
+            </div>
+            <div class="ts-background">
+                <div class="ts-background-image" data-bg-image="assets/img/bg-hero.jpg"></div>
+            </div>
+        </div>
+
+        <main id="ts-content">
+            <!--************ MY SERVICES ************************************************************************************-->
+            <section id="my-services" class="ts-block ts-xs-text-center pb-0">
+                <div class="container">
+                    <div class="ts-title text-center">
+                        <h2>My Services</h2>
+                    </div>
+                    <div id="services-container" class="row">
+                        <!-- <div class="col-sm-6 col-md-4 col-xl-4">
+                            <div class="ts-item">
+                                <div class="ts-item-content">
+                                    <div class="ts-item-header">
+                                        <div class="icon">
+                                            <i class='fa-solid fa-code'></i>
+                                        </div>
+                                    </div>
+                                    <div class="ts-item-body">
+                                        <h4>Web Design</h4>
+                                        <p>Duis molestie enim mattis gravida viverra. Fusce ut eros augue. Sed id mauris vel neque</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+            <!--************ ABOUT ME ************************************************************************************-->
+            <section id="about-me" class="ts-block pb-4">
+                <div class="container">
+                    <div class="ts-title text-center">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="row ts-align__vertical">
+                        <div class="col-md-6">
+                            <img id="about-img" alt="" class="mw-100 mb-5">
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="ts-bubble-border">Hi There</h4>
+                            <p id="about-text"></p>
+                            <dl class="ts-column-count-2">
+                                <dt>Name:</dt>
+                                <dd id="about-fullname"></dd>
+                                <dt>Phone:</dt>
+                                <dd id="about-phone"></dd>
+                                <dt>Email:</dt>
+                                <dd id="about-email"></dd>
+                                <dt>LinkediIn:</dt>
+                                <dd id="about-linkedin"></dd>
+                            </dl>
+                            <hr class="ts-hr-light mb-5">
+                            <a href="#contact" class="ts-btn-effect mr-2">
+                                <span class="ts-visible btn btn-primary ts-btn-arrow">Contact Me</span>
+                                <span class="ts-hidden btn btn-primary ts-btn-arrow" data-bg-color="#d44729">Contact Me</span>
+                            </a>
+                            <a id="about-cv" class="ts-btn-effect mr-2" download>
+                                <span class="ts-visible btn btn-outline-light">
+                                    <i class="fa fa-download small mr-2"></i>
+                                    Download CV
+                                </span>
+                                <span class="ts-hidden btn btn-light bg-white">
+                                    <i class="fa fa-download small mr-2"></i>
+                                    Download CV
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="ts-block">
+                <div class="container">
+                    <div class="text-center px-5 pt-5 position-relative">
+                        <h3 class="my-3">Let’s Work Together On Your Next Project!</h3>
+                        <a href="#contact" class="btn btn-primary mr-2 ts-push-down__50 ts-has-talk-arrow">Hire Me Now!</a>
+                        <div class="ts-background ts-opacity__20" data-bg-image="assets/img/bg-keyboard.jpg"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!--************ MY SKILLS ************************************************************************************-->
+            <section id="my-skills" class="ts-block pb-5">
+                <div class="container">
+                    <div class="ts-title text-center">
+                        <h2>My Skills</h2>
+                    </div>
+                    <h4>Every Day is a  New Challenge</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>As a passionate and detail-oriented frontend developer, I specialize in crafting dynamic and responsive web applications that deliver exceptional user experiences. My expertise spans across modern technologies and frameworks, ensuring that I stay at the forefront of the rapidly evolving web development landscape. From building seamless interfaces to optimizing performance, my skill set encompasses the full spectrum of frontend development, making me adept at turning complex requirements into user-friendly solutions.</p>
+                            <a href="#contact" class="btn btn-outline-light mb-5">Contact Me</a>
+                        </div>
+                        <div id="skills-container" class="col-md-6">
+                            <!-- <div class="progress" data-progress-width="100%">
+                                <h5 class="ts-progress-title">Webdesign</h5>
+                                <figure class="ts-progress-value"></figure>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--************ PORTFOLIO ************************************************************************************-->
+            <section class="ts-block pb-5" id="portfolio">
+                <div class="container">
+                    <div class="ts-title">
+                        <h2>Portfolio</h2>
+                    </div>
+                    <div id="portfolio-container" class="card-columns ts-gallery ts-column-count-4">
+                        <!-- <a href="assets/img/img-work-01.png" class="card ts-gallery__item popup-image">
+                            <div class="ts-gallery__item-description">
+                                <h6 class="ts-opacity__50">Branding</h6>
+                                <h4>Pehaz</h4>
+                            </div>
+                            <img src="assets/img/img-work-01.png" class="card-img" alt="">
+                        </a> -->
+                    </div>
+                </div>
+            </section>
+
+            <!--************ STATISTICS ************************************************************************************-->
+            <section class="ts-block" data-bg-image="assets/img/bg-statistics.jpg">
+                <div class="container ts-promo-numbers">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure id="clients" class="odometer" data-odometer-final="">0</figure>
+                                <h5>Clients</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure id="projects" class="odometer" data-odometer-final="">0</figure>
+                                <h5>Projects</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure id="awards" class="odometer" data-odometer-final="">0</figure>
+                                <h5>Awards</h5>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure id="experience" class="odometer" data-odometer-final="">0</figure>
+                                <h5>Years Experience</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--************ TESTIMONIALS ************************************************************************************-->
+            <section id="testimonials" class="ts-block text-center pb-5">
+                <div class="container">
+                    <div class="ts-title">
+                        <h2>Testimonials</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div id="testimonials-container" class="owl-carousel" data-owl-dots="1" data-owl-loop="1" data-animate="ts-fadeInUp">
+                                <!-- <div class="slide mb-5">
+                                    <figure class="d-inline-block p-3 ts-bg-primary text-white ts-has-talk-arrow">
+                                        <i class="fa fa-quote-right"></i>
+                                    </figure>
+                                    <p class="ts-h5">
+                                        In id nulla magna. Nullam posuere fermentum mattis. Nunc id dui at sapien faucibus
+                                        fermentum ut vel diam. Nullam tempus, nunc id efficitur sagittis
+                                    </p>
+                                    <div class="ts-circle__lg mb-3" data-bg-image="assets/img/person.jpg"></div>
+                                    <h5>Jane Doe</h5>
+                                    <h6 class="ts-opacity__40">Bristol Creative</h6>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="partners" class="ts-block py-4">
+                <div class="container">
+                    <div class="d-block d-md-flex justify-content-between align-items-center text-center ts-partners py-3">
+                        <a href="#">
+                            <img src="assets/img/logo-01-w.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/logo-02-w.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/logo-03-w.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/logo-04-w.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/logo-05-w.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--************ FOOTER *************************************************************************************-->
+        <footer id="ts-footer" class="mt-5">
+            <section id="contact" class="ts-block ts-separate-bg-element" data-bg-image-opacity=".1">
+                <div class="container">
+                    <div class="ts-title text-center">
+                        <h2 class="ts-bubble-border">Get In Touch</h2>
+                    </div>
+                    <!--************ CONTACT DETAILS *************************************************************************************-->
+                    <div class="row ts-xs-text-center ">
+                        <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp">
+                            <img src="assets/img/icon-pin.png" class="mb-4" alt="">
+                            <h5>Address</h5>
+                            <div id="contact-address" class="ts-opacity__50"></div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp" data-delay=".1s">
+                            <img src="assets/img/icon-phone-02.png" class="mb-4" alt="">
+                            <h5>Phone</h5>
+                            <div id="contact-phones" class="ts-opacity__50"></div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp" data-delay=".2s">
+                            <img src="assets/img/icon-envelope.png" class="mb-4" alt="">
+                            <h5>Email</h5>
+                            <div id="contact-emails" class="ts-opacity__50"></div>
+                        </div>
+                        <div class="col-sm-6 col-md-3 mb-4" data-animate="ts-fadeInUp" data-delay=".3s">
+                            <img src="assets/img/icon-talk-bubble.png" class="mb-4" alt="">
+                            <h5>LinkedIn</h5>
+                            <div id="contact-linkedin"></div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5">
+                        <div class="row">
+                            <!--************ SOCIAL MEDIAS *************************************************************************************-->
+                            <div class="col-md-4">
+                                <h3>Let’s Connect</h3>
+                                <div id="footer-socialmedia" class="ts-column-count-sm-2">
+                                    <!-- <a href="#" class="mb-3 d-flex text-white ts-align__vertical">
+                                        <span class="ts-circle__xs border border-white ts-border-light mr-4">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </span>
+                                        <span>Facebook</span>
+                                    </a> -->
+
+                                </div>
+                            </div>
+
+                            <!--************ CONTACT FORM *************************************************************************************-->
+                            <div class="col-md-8">
+                                <h3>Send Me a Message</h3>
+                                <form id="form-contact" method="post" class="clearfix ts-form ts-form-email">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="form-contact-name">Name *</label>
+                                                <input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="form-contact-email">Email *</label>
+                                                <input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Email" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-contact-subject">Subject *</label>
+                                        <input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="form-contact-message">Message *</label>
+                                                <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Message" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <button type="submit" class="btn btn-primary float-right ts-btn-arrow" id="form-contact-submit">Send a Message</button>
+                                    </div>
+                                    <div class="form-contact-status"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--************ COPYRIGHT *************************************************************************************-->
+            <div class="text-dark bg-white">
+                <div class="container py-3 position-relative">
+                    <small id="copyright">© <span class="year"></span> <span class="name"></span>, All Rights Reserved</small>
+                    <a href="#page-top" class="ts-circle__xs rounded-0 bg-dark position-absolute ts-right__0 ts-top__0 ts-push-up__50 ts-scroll">
+                        <i class="fa fa-arrow-up text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+	<script src="assets/js/custom.hero.js"></script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/js/isInViewport.jquery.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
+	<script src="assets/js/scrolla.jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+	<script src="assets/js/odometer.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="../bundles/bundle.js"></script>
+</body>
+</html>
